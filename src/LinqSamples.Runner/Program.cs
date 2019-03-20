@@ -71,6 +71,26 @@ namespace LinqSamples.Runner
             //setOperators.Linq53(); 
             #endregion
 
+            #region ConversionOperators
+
+            var conversionOps = new ConversionOperators();
+
+            // This sample uses ToArray to immediately evaluate a sequence into an array
+            //conversionOps.Linq54();
+
+            // This sample uses ToList to immediately evaluate a sequence into a List<T>
+            //conversionOps.Linq55(); 
+
+            // This sample uses ToDictionary to immediately  evaluate a  sequence  and a 
+            // related key expression into a dictionary
+            //conversionOps.Linq56(); 
+
+            // This sample uses OfType to return only the elements of the array that are 
+            // of type double
+            //conversionOps.Linq57(); 
+
+            #endregion
+
             #region AggregateOperators
 
             var aggregateOps = new AggregateOperators();
