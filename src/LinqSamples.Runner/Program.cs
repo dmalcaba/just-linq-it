@@ -10,11 +10,37 @@ namespace LinqSamples.Runner
             // Comment or uncomment the method calls below to run or not
             //
 
+            #region GroupingOperators
+
+            var groupingOperators = new GroupingOperators();
+
+            // This sample uses group by to partition a list of numbers by their remainder when divided by 5.
+            groupingOperators.DataSetLinq40();
+
+            // This sample uses group by to partition a list of words by their first letter.
+            //groupingOperators.DataSetLinq41();    
+
+            // This sample uses group by to partition a list of products by category.
+            //groupingOperators.DataSetLinq42();    
+
+            // This sample uses group by to partition a list of each customer's orders, first by year, and then by month.
+            //groupingOperators.DataSetLinq43();    
+
+            // This sample uses GroupBy to partition trimmed elements of an array using a custom comparer 
+            // that matches words that are anagrams of each other.
+            //groupingOperators.DataSetLinq44();    
+
+            // This sample uses GroupBy to partition trimmed elements of an array using a custom comparer that matches words 
+            // that are anagrams of each other, and then converts the results to uppercase.
+            //groupingOperators.DataSetLinq45();   
+
+            #endregion
+
             #region SetOperators
             var setOperators = new SetOperators();
 
             // This sample uses Distinct to remove  duplicate  elements in a sequence of factors of 300
-            setOperators.Linq46();
+            //setOperators.Linq46();
 
             // This sample uses Distinct to find the unique Category names
             //setOperators.Linq47(); 
