@@ -15,7 +15,7 @@ namespace LinqSamples.Runner
             var groupingOperators = new GroupingOperators();
 
             // This sample uses group by to partition a list of numbers by their remainder when divided by 5.
-            groupingOperators.DataSetLinq40();
+            //groupingOperators.DataSetLinq40();
 
             // This sample uses group by to partition a list of words by their first letter.
             //groupingOperators.DataSetLinq41();    
@@ -69,6 +69,74 @@ namespace LinqSamples.Runner
             // This sample uses Except to create one  sequence that contains the 1st letters of product 
             // names that are not also first letters of customer names 
             //setOperators.Linq53(); 
+            #endregion
+
+            #region AggregateOperators
+
+            var aggregateOps = new AggregateOperators();
+            // This sample uses Count to get the number of unique prime factors of 300
+            //aggregateOps.Linq73();
+
+            // This sample uses Count to get the number of odd ints in the array
+            //aggregateOps.Linq74(); 
+
+            // This sample uses Count to return a list of customers and how many orders each has
+            //aggregateOps.Linq76();
+
+            // This sample uses Count to return a list of categories and how many products each has
+            //aggregateOps.Linq77(); 
+
+            // This sample uses Sum to add all the numbers in an array
+            //aggregateOps.Linq78(); 
+
+            // This sample uses Sum to get the total number of characters of all words in the array
+            //aggregateOps.Linq79(); 
+
+            // This sample uses Sum to get the total units in stock for each product category
+            //aggregateOps.Linq80(); 
+
+            // This sample uses Min to get the lowest number in an array
+            //aggregateOps.Linq81(); 
+
+            // This sample uses Min to get the length of the shortest word in an array
+            //aggregateOps.Linq82(); 
+
+            // This sample uses Min to get the cheapest price among each category's products
+            //aggregateOps.Linq83(); 
+
+            // This sample uses Min to get the products with the lowest price in each category
+            //aggregateOps.Linq84(); 
+
+            // This sample uses Max to get the highest number in an array. Note that the method 
+            // returns a single value
+            //aggregateOps.Linq85(); 
+
+            // This sample uses Max to get the length of the longest word in an array
+            //aggregateOps.Linq86(); 
+
+            // This sample uses Max to get the most expensive price among each category's products
+            //aggregateOps.Linq87(); 
+
+            // This sample uses Max to get the products with the most expensive price in each category
+            //aggregateOps.Linq88(); 
+
+            // This sample uses Average to get the average of all numbers in an array
+            //aggregateOps.Linq89(); 
+
+            // This sample uses Average to get the average length of the words in the array
+            //aggregateOps.Linq90(); 
+
+            // This sample uses Average to get the average price of each category's products
+            //aggregateOps.Linq91(); 
+
+            // This sample uses Aggregate to create a running product on the array that calculates 
+            // the total product of all elements            
+            //aggregateOps.Linq92(); 
+
+            // This sample uses Aggregate to create a running account balance that subtracts each 
+            // withdrawal from the initial balance of 100, as long as the balance never drops below 0
+            //aggregateOps.Linq93(); 
+
             #endregion
 
             #region QueryExecution
