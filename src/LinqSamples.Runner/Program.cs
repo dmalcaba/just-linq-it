@@ -159,6 +159,15 @@ namespace LinqSamples.Runner
 
             #endregion
 
+            #region CustomSequenceOperators
+
+            var customSeqOps = new CustomSequenceOperatorsCore();
+
+            // This sample uses a user-created sequence operator, Combine, to calculate the dot product of two vectors.
+            //customSeqOps.DataSetLinq98();
+
+            #endregion
+
             #region QueryExecution
 
             var queryExecution = new QueryExecution();
