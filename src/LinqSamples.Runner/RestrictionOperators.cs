@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LinqSamples.Data.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -28,8 +29,10 @@ namespace LinqSamples.Runner
         [Description("This sample uses the where clause to find all products that are out of stock.")]
         public void Linq2()
         {
+            List<Product> products = GetProductList();
+
             var soldOutProducts =
-                from prod in productList
+                from prod in products
                 where prod.UnitsInStock == 0
                 select prod;
 
@@ -44,8 +47,10 @@ namespace LinqSamples.Runner
                  "cost more than 3.00 per unit.")]
         public void Linq3()
         {
+            List<Product> products = GetProductList();
+
             var expensiveInStockProducts =
-                from prod in productList
+                from prod in products
                 where prod.UnitsInStock > 0 && prod.UnitPrice > 3.00M
                 select prod;
 
@@ -60,8 +65,10 @@ namespace LinqSamples.Runner
                  "and then it uses a foreach loop to iterate over the orders collection that belongs to each customer.")]
         public void Linq4()
         {
+            List<Customer> customers = GetCustomerList();
+
             var waCustomers =
-                from cust in customerList
+                from cust in customers
                 where cust.Region == "WA"
                 select cust;
 

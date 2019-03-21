@@ -10,14 +10,37 @@ namespace LinqSamples.Runner
     {
         private readonly Repository _repo;
 
-        public readonly List<Product> productList;
-        public readonly List<Customer> customerList;
+        private List<Product> productList;
+        private List<Customer> customerList;
+        private List<Supplier> supplierList;
 
         public LinqSampleBase()
         {
             _repo = new Repository();
-            productList = _repo.GetProducts();
-            customerList = _repo.GetCustomers();
+        }
+
+        public List<Product> GetProductList()
+        {
+            if (productList == null)
+                productList = _repo.GetProducts();
+
+            return productList;
+        }
+
+        public List<Customer> GetCustomerList()
+        {
+            if (customerList == null)
+                customerList = _repo.GetCustomers();
+
+            return customerList;
+        }
+
+        public List<Supplier> GetSupplierList()
+        {
+            if (supplierList == null)
+                supplierList = _repo.GetSuppliers();
+
+            return supplierList;
         }
     }
 }

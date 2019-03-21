@@ -8,17 +8,8 @@ using System.Text;
 
 namespace LinqSamples.Runner
 {
-    public class MiscellaneousOperators
+    public class MiscellaneousOperators : LinqSampleBase
     {
-        private readonly Repository _repo;
-        private List<Product> productList;
-        private List<Customer> customerList;
-
-        public MiscellaneousOperators()
-        {
-            _repo = new Repository();
-        }
-
         [Category("Miscellaneous Operators")]
         [Description("This sample uses Concat to create one sequence that contains each array's " +
                      "values, one after the other.")]
@@ -41,8 +32,8 @@ namespace LinqSamples.Runner
                      "all customers and products, including any duplicates.")]
         public void Linq95()
         {
-            List<Customer> customers = _repo.GetCustomers();
-            List<Product> products = _repo.GetProducts();
+            List<Customer> customers = GetCustomerList();
+            List<Product> products = GetProductList();
 
             var customerNames =
                 from cust in customers

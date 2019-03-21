@@ -8,18 +8,8 @@ using System.Text;
 
 namespace LinqSamples.Runner
 {
-    public class JoinOperators
+    public class JoinOperators : LinqSampleBase
     {
-        private readonly Repository _repo;
-        private List<Product> productList;
-        private List<Customer> customerList;
-        private List<Supplier> supplierList;
-
-        public JoinOperators()
-        {
-            _repo = new Repository();
-        }
-
         [Category("Join Operators")]
         [Description("This sample shows how to perform a simple inner equijoin of two sequences to " +
             "produce a flat result set that consists of each element in suppliers that has a matching element " +
@@ -27,8 +17,8 @@ namespace LinqSamples.Runner
         public void Linq102()
         {
 
-            List<Customer> customers = _repo.GetCustomers();
-            List<Supplier> suppliers = _repo.GetSuppliers();
+            List<Customer> customers = GetCustomerList();
+            List<Supplier> suppliers = GetSupplierList();
 
             var custSupJoin =
                 from sup in suppliers
@@ -46,10 +36,8 @@ namespace LinqSamples.Runner
                     " that produces a sequence of objects, each of which has a key and an inner sequence of all matching elements.")]
         public void Linq103()
         {
-
-
-            List<Customer> customers = _repo.GetCustomers();
-            List<Supplier> suppliers = _repo.GetSuppliers();
+            List<Customer> customers = GetCustomerList();
+            List<Supplier> suppliers = GetSupplierList();
 
             var custSupQuery =
                 from sup in suppliers
@@ -79,7 +67,7 @@ namespace LinqSamples.Runner
                 "Dairy Products",
                 "Seafood" };
 
-            List<Product> products = _repo.GetProducts();
+            List<Product> products = GetProductList();
 
             var prodByCategory =
                 from cat in categories
@@ -97,8 +85,8 @@ namespace LinqSamples.Runner
             "least once, even if they don't match any right hand side elements.")]
         public void Linq105()
         {
-            List<Customer> customers = _repo.GetCustomers();
-            List<Supplier> suppliers = _repo.GetSuppliers();
+            List<Customer> customers = GetCustomerList();
+            List<Supplier> suppliers = GetSupplierList();
 
             var supplierCusts =
                 from sup in suppliers
@@ -124,8 +112,8 @@ namespace LinqSamples.Runner
         public void Linq106()
         {
 
-            List<Customer> customers = _repo.GetCustomers();
-            List<Supplier> suppliers = _repo.GetSuppliers();
+            List<Customer> customers = GetCustomerList();
+            List<Supplier> suppliers = GetSupplierList();
 
             var custSuppliers =
                 from cust in customers
@@ -151,8 +139,8 @@ namespace LinqSamples.Runner
                      "Note the use of anonymous types to encapsulate the multiple key values.")]
         public void Linq107()
         {
-            List<Customer> customers = _repo.GetCustomers();
-            List<Supplier> suppliers = _repo.GetSuppliers();
+            List<Customer> customers = GetCustomerList();
+            List<Supplier> suppliers = GetSupplierList();
 
             var supplierCusts =
                 from sup in suppliers

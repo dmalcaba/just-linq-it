@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LinqSamples.Data.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -49,9 +50,10 @@ namespace LinqSamples.Runner
                     "Use the \"descending\" keyword at the end of the clause to perform a reverse ordering.")]
         public void Linq30()
         {
+            List<Product> products = GetProductList();
 
             var sortedProducts =
-                from prod in productList
+                from prod in products
                 orderby prod.ProductName
                 select prod;
 
@@ -103,8 +105,10 @@ namespace LinqSamples.Runner
                      "from highest to lowest.")]
         public void Linq33()
         {
+            List<Product> products = GetProductList();
+
             var sortedProducts =
-                from prod in productList
+                from prod in products
                 orderby prod.UnitsInStock descending
                 select prod;
 
@@ -172,8 +176,10 @@ namespace LinqSamples.Runner
                      "first by category, and then by unit price, from highest to lowest.")]
         public void Linq37()
         {
+            List<Product> products = GetProductList();
+
             var sortedProducts =
-                from prod in productList
+                from prod in products
                 orderby prod.Category, prod.UnitPrice descending
                 select prod;
 

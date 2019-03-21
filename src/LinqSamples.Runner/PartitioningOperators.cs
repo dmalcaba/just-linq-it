@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LinqSamples.Data.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -29,8 +30,10 @@ namespace LinqSamples.Runner
                      "in Washington.")]
         public void Linq21()
         {
+            List<Customer> customers = GetCustomerList();
+
             var first3WAOrders = (
-                from cust in customerList
+                from cust in customers
                 from order in cust.Orders
                 where cust.Region == "WA"
                 select new { cust.CustomerID, order.OrderID, order.OrderDate })
@@ -64,8 +67,10 @@ namespace LinqSamples.Runner
                      "in Washington.")]
         public void Linq23()
         {
+            List<Customer> customers = GetCustomerList();
+
             var waOrders =
-                from cust in customerList
+                from cust in customers
                 from order in cust.Orders
                 where cust.Region == "WA"
                 select new { cust.CustomerID, order.OrderID, order.OrderDate };

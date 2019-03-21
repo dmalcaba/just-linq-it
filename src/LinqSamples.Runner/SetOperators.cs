@@ -8,15 +8,8 @@ using System.Text;
 
 namespace LinqSamples.Runner
 {
-    public class SetOperators
+    public class SetOperators : LinqSampleBase
     {
-        private readonly Repository _repo;
-
-        public SetOperators()
-        {
-            _repo = new Repository();
-        }
-
         [Category("Set Operators")]
         [Description("This sample uses Distinct to remove duplicate elements in a sequence of " +
             "factors of 300.")]
@@ -37,7 +30,7 @@ namespace LinqSamples.Runner
         [Description("This sample uses Distinct to find the unique Category names.")]
         public void Linq47()
         {
-            List<Product> products = _repo.GetProducts();
+            List<Product> products = GetProductList();
 
             var categoryNames = (
                 from prod in products
@@ -73,8 +66,8 @@ namespace LinqSamples.Runner
                      "from both product and customer names. Union is only available through method syntax.")]
         public void Linq49()
         {
-            List<Product> products = _repo.GetProducts();
-            List<Customer> customers = _repo.GetCustomers();
+            List<Product> products = GetProductList();
+            List<Customer> customers = GetCustomerList();
 
             var productFirstChars =
                 from prod in products
@@ -114,8 +107,8 @@ namespace LinqSamples.Runner
                      "from both product and customer names.")]
         public void Linq51()
         {
-            List<Product> products = _repo.GetProducts();
-            List<Customer> customers = _repo.GetCustomers();
+            List<Product> products = GetProductList();
+            List<Customer> customers = GetCustomerList();
 
             var productFirstChars =
                 from prod in products
@@ -155,8 +148,8 @@ namespace LinqSamples.Runner
                      "of product names that are not also first letters of customer names.")]
         public void Linq53()
         {
-            List<Product> products = _repo.GetProducts();
-            List<Customer> customers = _repo.GetCustomers();
+            List<Product> products = GetProductList();
+            List<Customer> customers = GetCustomerList();
 
             var productFirstChars =
                 from prod in products

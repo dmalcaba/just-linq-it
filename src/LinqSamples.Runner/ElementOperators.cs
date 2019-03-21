@@ -1,29 +1,19 @@
 ﻿using LinqSamples.Data.Model;
-using LinqSamples.Data.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
 
 namespace LinqSamples.Runner
 {
-    public class ElementOperators
+    public class ElementOperators : LinqSampleBase
     {
-        private List<Product> productList;
-        private readonly Repository _repo;
-
-        public ElementOperators()
-        {
-            _repo = new Repository();
-        }
-
         [Category("Element Operators")]
         [Description("This sample uses First to return the first matching element " +
                      "as a Product, instead of as a sequence containing a Product.")]
         public void Linq58()
         {
-            List<Product> products = _repo.GetProducts();
+            List<Product> products = GetProductList();
 
             Product product12 = (
                 from prod in products
@@ -63,7 +53,7 @@ namespace LinqSamples.Runner
                      "as a single Product object, unless there is no match, in which case null is returned.")]
         public void Linq62()
         {
-            List<Product> products = _repo.GetProducts();
+            List<Product> products = GetProductList();
 
             Product product789 = products.FirstOrDefault(p => p.ProductID == 789);
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LinqSamples.Data.Model;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 
@@ -23,8 +25,10 @@ namespace LinqSamples.Runner
                      "that have at least one product that is out of stock.")]
         public void Linq69()
         {
+            List<Product> products = GetProductList();
+
             var productGroups =
-                from prod in productList
+                from prod in products
                 group prod by prod.Category into prodGroup
                 where prodGroup.Any(p => p.UnitsInStock == 0)
                 select new { Category = prodGroup.Key, Products = prodGroup };
@@ -49,8 +53,10 @@ namespace LinqSamples.Runner
                      "that have all of their products in stock.")]
         public void Linq72()
         {
+            List<Product> products = GetProductList();
+
             var productGroups =
-                from prod in productList
+                from prod in products
                 group prod by prod.Category into prodGroup
                 where prodGroup.All(p => p.UnitsInStock > 0)
                 select new { Category = prodGroup.Key, Products = prodGroup };
