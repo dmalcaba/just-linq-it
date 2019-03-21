@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace LinqSamples.Runner
 {
-    public class Quantifiers : LinqSampleBase
+    public partial class LinqSamples : LinqSampleBase
     {
         [Category("Quantifiers")]
         [Description("This sample uses Any to determine if any of the words in the array " +

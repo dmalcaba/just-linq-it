@@ -3,20 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Xml.Linq;
 
 namespace LinqSamples.Runner
 {
-    public class GroupingOperators
+    public partial class LinqSamples
     {
-        private DataSet testDS;
-
-        public GroupingOperators()
-        {
-            testDS = TestHelper.CreateTestDataset();
-        }
-
         [Category("Grouping Operators")]
         [Description("This sample uses group by to partition a list of numbers by " +
                     "their remainder when divided by 5.")]

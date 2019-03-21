@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
 
 namespace LinqSamples.Runner
 {
-    public class QueryExecution
+    public partial class LinqSamples
     {
         [Category("Query Execution")]
         [Description("The following sample shows how query execution is deferred until the query is " +

@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace LinqSamples.Runner
 {
-    public class ElementOperators : LinqSampleBase
+    public partial class LinqSamples : LinqSampleBase
     {
         [Category("Element Operators")]
         [Description("This sample uses First to return the first matching element " +

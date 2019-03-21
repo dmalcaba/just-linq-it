@@ -5,15 +5,8 @@ using System.Linq;
 
 namespace LinqSamples.Runner
 {
-    public class ProjectionOperators
+    public partial class LinqSamples
     {
-        private DataSet testDS;
-
-        public ProjectionOperators()
-        {
-            testDS = TestHelper.CreateTestDataset();
-        }
-
         [Category("Projection Operators")]
         [Description("This sample uses select to produce a sequence of ints one higher than " +
                      "those in an existing array of ints.")]

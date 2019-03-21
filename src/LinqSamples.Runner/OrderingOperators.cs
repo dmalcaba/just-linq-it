@@ -6,11 +6,11 @@ using System.Linq;
 
 namespace LinqSamples.Runner
 {
-    public class OrderingOperators : LinqSampleBase
+    public partial class LinqSamples : LinqSampleBase
     {
-
-        [Category("Ordering Operators")]
-        [Description("This sample uses orderby to sort a list of words alphabetically.")]
+        /// <summary>
+        /// This sample uses orderby to sort a list of words alphabetically.
+        /// </summary>
         public void Linq28()
         {
             string[] words = { "cherry", "apple", "blueberry" };
@@ -27,8 +27,9 @@ namespace LinqSamples.Runner
             }
         }
 
-        [Category("Ordering Operators")]
-        [Description("This sample uses orderby to sort a list of words by length.")]
+        /// <summary>
+        /// This sample uses orderby to sort a list of words by length.
+        /// </summary>
         public void Linq29()
         {
             string[] words = { "cherry", "apple", "blueberry" };

@@ -1,18 +1,17 @@
 ﻿using LinqSamples.Data.Model;
-using LinqSamples.Data.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
 
 namespace LinqSamples.Runner
 {
-    public class SetOperators : LinqSampleBase
+    [Category("Set Operators")]
+    public partial class LinqSamples : LinqSampleBase
     {
-        [Category("Set Operators")]
-        [Description("This sample uses Distinct to remove duplicate elements in a sequence of " +
-            "factors of 300.")]
+        /// <summary>
+        /// This sample uses Distinct to remove duplicate elements in a sequence of factors of 300.
+        /// </summary>
         public void Linq46()
         {
             int[] factorsOf300 = { 2, 2, 3, 5, 5 };

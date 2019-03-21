@@ -3,11 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
 
 namespace LinqSamples.Runner
 {
-    public class PartitioningOperators : LinqSampleBase
+    public partial class LinqSamples : LinqSampleBase
     {
         [Category("Partitioning Operators")]
         [Description("This sample uses Take to get only the first 3 elements of " +

@@ -1,14 +1,12 @@
 ﻿using LinqSamples.Data.Model;
-using LinqSamples.Data.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
 
 namespace LinqSamples.Runner
 {
-    public class MiscellaneousOperators : LinqSampleBase
+    public partial class LinqSamples : LinqSampleBase
     {
         [Category("Miscellaneous Operators")]
         [Description("This sample uses Concat to create one sequence that contains each array's " +

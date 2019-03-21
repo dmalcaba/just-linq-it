@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace LinqSamples.Runner
 {
-    public class AggregateOperators : LinqSampleBase
+    public partial class LinqSamples : LinqSampleBase
     {
         [Category("Aggregate Operators")]
         [Description("This sample uses Count to get the number of unique prime factors of 300.")]

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace LinqSamples.Runner
 {
-    public class ConversionOperators
+    public partial class LinqSamples
     {
         [Category("Conversion Operators")]
         [Description("This sample uses ToArray to immediately evaluate a sequence into an array.")]

@@ -1,14 +1,12 @@
 ﻿using LinqSamples.Data.Model;
-using LinqSamples.Data.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
 
 namespace LinqSamples.Runner
 {
-    public class JoinOperators : LinqSampleBase
+    public partial class LinqSamples : LinqSampleBase
     {
         [Category("Join Operators")]
         [Description("This sample shows how to perform a simple inner equijoin of two sequences to " +

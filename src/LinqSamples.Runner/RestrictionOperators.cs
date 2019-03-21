@@ -3,11 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
 
 namespace LinqSamples.Runner
 {
-    public class RestrictionOperators : LinqSampleBase
+    public partial class LinqSamples : LinqSampleBase
     {
         [Description("This sample uses the where clause to find all elements of an array with a value less than 5.")]
         public void Linq1()
@@ -97,7 +96,5 @@ namespace LinqSamples.Runner
                 Console.WriteLine("The word {0} is shorter than its value.", d);
             }
         }
-
-
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace LinqSamples.Runner
 {
-    public class GenerationOperators
+    public partial class LinqSamples
     {
         [Category("Generation Operators")]
         [Description("This sample uses Range to generate a sequence of numbers from 100 to 149 " +

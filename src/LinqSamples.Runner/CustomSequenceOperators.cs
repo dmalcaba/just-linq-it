@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Linq;
-using System.Text;
 
 namespace LinqSamples.Runner
 {
@@ -21,11 +20,11 @@ namespace LinqSamples.Runner
         }
     }
 
-    public class CustomSequenceOperatorsCore
+    public partial class LinqSamples
     {
         private DataSet testDS;
 
-        public CustomSequenceOperatorsCore()
+        public LinqSamples()
         {
             testDS = TestHelper.CreateTestDataset();
         }
