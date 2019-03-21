@@ -1,16 +1,15 @@
 ﻿using LinqSamples.Data.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 
 namespace LinqSamples.Runner
 {
     public partial class LinqSamples : LinqSampleBase
     {
-        [Category("Element Operators")]
-        [Description("This sample uses First to return the first matching element " +
-                     "as a Product, instead of as a sequence containing a Product.")]
+        /// <summary>
+        /// This sample uses First to return the first matching element as a Product, instead of as a sequence containing a Product.
+        /// </summary>
         public void Linq58()
         {
             List<Product> products = GetProductList();
@@ -24,8 +23,9 @@ namespace LinqSamples.Runner
             ObjectDumper.Write(product12);
         }
 
-        [Category("Element Operators")]
-        [Description("This sample uses First to find the first element in the array that starts with 'o'.")]
+        /// <summary>
+        /// This sample uses First to find the first element in the array that starts with 'o'.
+        /// </summary>
         public void Linq59()
         {
             string[] strings = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
@@ -35,10 +35,11 @@ namespace LinqSamples.Runner
             Console.WriteLine("A string starting with 'o': {0}", startsWithO);
         }
 
-        [Category("Element Operators")]
-        [Description("This sample uses FirstOrDefault to try to return the first element of the sequence, " +
-                     "unless there are no elements, in which case the default value for that type " +
-                     "is returned. FirstOrDefault is useful for creating outer joins.")]
+        /// <summary>
+        /// This sample uses FirstOrDefault to try to return the first element of the sequence, 
+        /// unless there are no elements, in which case the default value for that type
+        /// is returned. FirstOrDefault is useful for creating outer joins.
+        /// </summary>
         public void Linq61()
         {
             int[] numbers = { };
@@ -48,9 +49,10 @@ namespace LinqSamples.Runner
             Console.WriteLine(firstNumOrDefault);
         }
 
-        [Category("Element Operators")]
-        [Description("This sample uses FirstOrDefault to return the first product whose ProductID is 789 " +
-                     "as a single Product object, unless there is no match, in which case null is returned.")]
+        /// <summary>
+        /// This sample uses FirstOrDefault to return the first product whose ProductID is 789
+        /// as a single Product object, unless there is no match, in which case null is returned.
+        /// </summary>
         public void Linq62()
         {
             List<Product> products = GetProductList();
@@ -60,9 +62,9 @@ namespace LinqSamples.Runner
             Console.WriteLine("Product 789 exists: {0}", product789 != null);
         }
 
-        [Category("Element Operators")]
-        [Description("This sample uses ElementAt to retrieve the second number greater than 5 " +
-                     "from an array.")]
+        /// <summary>
+        /// This sample uses ElementAt to retrieve the second number greater than 5 from an array.
+        /// </summary>
         public void Linq64()
         {
             int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };

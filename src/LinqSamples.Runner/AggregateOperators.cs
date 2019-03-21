@@ -1,15 +1,15 @@
 ﻿using LinqSamples.Data.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 
 namespace LinqSamples.Runner
 {
     public partial class LinqSamples : LinqSampleBase
     {
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Count to get the number of unique prime factors of 300.")]
+        /// <summary>
+        /// This sample uses Count to get the number of unique prime factors of 300.
+        /// </summary>
         public void Linq73()
         {
             int[] primeFactorsOf300 = { 2, 2, 3, 5, 5 };
@@ -19,8 +19,9 @@ namespace LinqSamples.Runner
             Console.WriteLine("There are {0} unique prime factors of 300.", uniqueFactors);
         }
 
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Count to get the number of odd ints in the array.")]
+        /// <summary>
+        /// This sample uses Count to get the number of odd ints in the array.
+        /// </summary>
         public void Linq74()
         {
             int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
@@ -30,9 +31,9 @@ namespace LinqSamples.Runner
             Console.WriteLine("There are {0} odd numbers in the list.", oddNumbers);
         }
 
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Count to return a list of customers and how many orders " +
-                     "each has.")]
+        /// <summary>
+        /// This sample uses Count to return a list of customers and how many orders each has.
+        /// </summary>
         public void Linq76()
         {
             List<Customer> customers = GetCustomerList();
@@ -44,9 +45,9 @@ namespace LinqSamples.Runner
             ObjectDumper.Write(orderCounts);
         }
 
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Count to return a list of categories and how many products " +
-                     "each has.")]
+        /// <summary>
+        /// This sample uses Count to return a list of categories and how many products each has.
+        /// </summary>
         public void Linq77()
         {
             List<Product> products = GetProductList();
@@ -59,9 +60,9 @@ namespace LinqSamples.Runner
             ObjectDumper.Write(categoryCounts);
         }
 
-        //DONE Changed "get the total of" to "add all"
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Sum to add all the numbers in an array.")]
+        /// <summary>
+        /// This sample uses Sum to add all the numbers in an array.
+        /// </summary>
         public void Linq78()
         {
             int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
@@ -71,9 +72,9 @@ namespace LinqSamples.Runner
             Console.WriteLine("The sum of the numbers is {0}.", numSum);
         }
 
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Sum to get the total number of characters of all words " +
-                     "in the array.")]
+        /// <summary>
+        /// This sample uses Sum to get the total number of characters of all words in the array.
+        /// </summary>
         public void Linq79()
         {
             string[] words = { "cherry", "apple", "blueberry" };
@@ -83,10 +84,9 @@ namespace LinqSamples.Runner
             Console.WriteLine("There are a total of {0} characters in these words.", totalChars);
         }
 
-
-
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Sum to get the total units in stock for each product category.")]
+        /// <summary>
+        /// This sample uses Sum to get the total units in stock for each product category.
+        /// </summary>
         public void Linq80()
         {
             List<Product> products = GetProductList();
@@ -99,8 +99,9 @@ namespace LinqSamples.Runner
             ObjectDumper.Write(categories);
         }
 
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Min to get the lowest number in an array.")]
+        /// <summary>
+        /// This sample uses Min to get the lowest number in an array.
+        /// </summary>
         public void Linq81()
         {
             int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
@@ -110,8 +111,9 @@ namespace LinqSamples.Runner
             Console.WriteLine("The minimum number is {0}.", minNum);
         }
 
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Min to get the length of the shortest word in an array.")]
+        /// <summary>
+        /// This sample uses Min to get the length of the shortest word in an array.
+        /// </summary>
         public void Linq82()
         {
             string[] words = { "cherry", "apple", "blueberry" };
@@ -121,8 +123,9 @@ namespace LinqSamples.Runner
             Console.WriteLine("The shortest word is {0} characters long.", shortestWord);
         }
 
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Min to get the cheapest price among each category's products.")]
+        /// <summary>
+        /// This sample uses Min to get the cheapest price among each category's products.
+        /// </summary>
         public void Linq83()
         {
             List<Product> products = GetProductList();
@@ -135,8 +138,9 @@ namespace LinqSamples.Runner
             ObjectDumper.Write(categories);
         }
 
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Min to get the products with the lowest price in each category.")]
+        /// <summary>
+        /// This sample uses Min to get the products with the lowest price in each category.
+        /// </summary>
         public void Linq84()
         {
             List<Product> products = GetProductList();
@@ -150,8 +154,9 @@ namespace LinqSamples.Runner
             ObjectDumper.Write(categories, 1);
         }
 
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Max to get the highest number in an array. Note that the method returns a single value.")]
+        /// <summary>
+        /// This sample uses Max to get the highest number in an array. Note that the method returns a single value.
+        /// </summary>
         public void Linq85()
         {
             int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
@@ -161,8 +166,9 @@ namespace LinqSamples.Runner
             Console.WriteLine("The maximum number is {0}.", maxNum);
         }
 
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Max to get the length of the longest word in an array.")]
+        /// <summary>
+        /// This sample uses Max to get the length of the longest word in an array.
+        /// </summary>
         public void Linq86()
         {
             string[] words = { "cherry", "apple", "blueberry" };
@@ -172,8 +178,9 @@ namespace LinqSamples.Runner
             Console.WriteLine("The longest word is {0} characters long.", longestLength);
         }
 
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Max to get the most expensive price among each category's products.")]
+        /// <summary>
+        /// This sample uses Max to get the most expensive price among each category's products.
+        /// </summary>
         public void Linq87()
         {
             List<Product> products = GetProductList();
@@ -186,8 +193,9 @@ namespace LinqSamples.Runner
             ObjectDumper.Write(categories);
         }
 
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Max to get the products with the most expensive price in each category.")]
+        /// <summary>
+        /// This sample uses Max to get the products with the most expensive price in each category.
+        /// </summary>
         public void Linq88()
         {
             List<Product> products = GetProductList();
@@ -201,8 +209,9 @@ namespace LinqSamples.Runner
             ObjectDumper.Write(categories, 1);
         }
 
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Average to get the average of all numbers in an array.")]
+        /// <summary>
+        /// This sample uses Average to get the average of all numbers in an array.
+        /// </summary>
         public void Linq89()
         {
             int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
@@ -212,8 +221,9 @@ namespace LinqSamples.Runner
             Console.WriteLine("The average number is {0}.", averageNum);
         }
 
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Average to get the average length of the words in the array.")]
+        /// <summary>
+        /// This sample uses Average to get the average length of the words in the array.
+        /// </summary>
         public void Linq90()
         {
             string[] words = { "cherry", "apple", "blueberry" };
@@ -223,8 +233,9 @@ namespace LinqSamples.Runner
             Console.WriteLine("The average word length is {0} characters.", averageLength);
         }
 
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Average to get the average price of each category's products.")]
+        /// <summary>
+        /// This sample uses Average to get the average price of each category's products.
+        /// </summary>
         public void Linq91()
         {
             List<Product> products = GetProductList();
@@ -237,9 +248,9 @@ namespace LinqSamples.Runner
             ObjectDumper.Write(categories);
         }
 
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Aggregate to create a running product on the array that " +
-                     "calculates the total product of all elements.")]
+        /// <summary>
+        /// This sample uses Aggregate to create a running product on the array that calculates the total product of all elements.
+        /// </summary>
         public void Linq92()
         {
             double[] doubles = { 1.7, 2.3, 1.9, 4.1, 2.9 };
@@ -249,10 +260,11 @@ namespace LinqSamples.Runner
             Console.WriteLine("Total product of all numbers: {0}", product);
         }
 
-        [Category("Aggregate Operators")]
-        [Description("This sample uses Aggregate to create a running account balance that " +
-                     "subtracts each withdrawal from the initial balance of 100, as long as " +
-                     "the balance never drops below 0.")]
+        /// <summary>
+        /// This sample uses Aggregate to create a running account balance that
+        /// subtracts each withdrawal from the initial balance of 100, as long as
+        /// the balance never drops below 0.
+        /// </summary>
         public void Linq93()
         {
             double startBalance = 100.0;
@@ -267,5 +279,4 @@ namespace LinqSamples.Runner
             Console.WriteLine("Ending balance: {0}", endBalance);
         }
     }
-
 }

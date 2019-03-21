@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Linq;
 
@@ -29,18 +28,16 @@ namespace LinqSamples.Runner
             testDS = TestHelper.CreateTestDataset();
         }
 
-        [Category("Custom Sequence Operators")]
-        [Description("This sample uses a user-created sequence operator, Combine, to calculate the " +
-                     "dot product of two vectors.")]
+        /// <summary>
+        /// This sample uses a user-created sequence operator, Combine, to calculate the dot product of two vectors.
+        /// </summary>
         public void DataSetLinq98()
         {
-
             var numbersA = testDS.Tables["NumbersA"].AsEnumerable();
             var numbersB = testDS.Tables["NumbersB"].AsEnumerable();
 
             int dotProduct = numbersA.Combine(numbersB, (a, b) => a.Field<int>("number") * b.Field<int>("number")).Sum();
             Console.WriteLine("Dot product: {0}", dotProduct);
         }
-
     }
 }

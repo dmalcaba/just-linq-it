@@ -1,13 +1,13 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Linq;
 
 namespace LinqSamples.Runner
 {
     public partial class LinqSamples
     {
-        [Category("Conversion Operators")]
-        [Description("This sample uses ToArray to immediately evaluate a sequence into an array.")]
+        /// <summary>
+        /// This sample uses ToArray to immediately evaluate a sequence into an array.
+        /// </summary>
         public void Linq54()
         {
             double[] doubles = { 1.7, 2.3, 1.9, 4.1, 2.9 };
@@ -25,8 +25,9 @@ namespace LinqSamples.Runner
             }
         }
 
-        [Category("Conversion Operators")]
-        [Description("This sample uses ToList to immediately evaluate a sequence into a List<T>.")]
+        /// <summary>
+        /// This sample uses ToList to immediately evaluate a sequence into a List<T>.
+        /// </summary>
         public void Linq55()
         {
             string[] words = { "cherry", "apple", "blueberry" };
@@ -44,9 +45,9 @@ namespace LinqSamples.Runner
             }
         }
 
-        [Category("Conversion Operators")]
-        [Description("This sample uses ToDictionary to immediately evaluate a sequence and a " +
-                    "related key expression into a dictionary.")]
+        /// <summary>
+        /// This sample uses ToDictionary to immediately evaluate a sequence and a related key expression into a dictionary.
+        /// </summary>
         public void Linq56()
         {
             var scoreRecords = new[] { new {Name = "Alice", Score = 50},
@@ -59,8 +60,9 @@ namespace LinqSamples.Runner
             Console.WriteLine("Bob's score: {0}", scoreRecordsDict["Bob"]);
         }
 
-        [Category("Conversion Operators")]
-        [Description("This sample uses OfType to return only the elements of the array that are of type double.")]
+        /// <summary>
+        /// This sample uses OfType to return only the elements of the array that are of type double.
+        /// </summary>
         public void Linq57()
         {
             object[] numbers = { null, 1.0, "two", 3, "four", 5, "six", 7.0 };

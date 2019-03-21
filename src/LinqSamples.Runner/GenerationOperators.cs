@@ -1,14 +1,14 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Linq;
 
 namespace LinqSamples.Runner
 {
     public partial class LinqSamples
     {
-        [Category("Generation Operators")]
-        [Description("This sample uses Range to generate a sequence of numbers from 100 to 149 " +
-             "that is used to find which numbers in that range are odd and even.")]
+        /// <summary>
+        /// This sample uses Range to generate a sequence of numbers from 100 to 149 
+        /// that is used to find which numbers in that range are odd and even.
+        /// </summary>
         public void Linq65()
         {
             var numbers =
@@ -21,8 +21,9 @@ namespace LinqSamples.Runner
             }
         }
 
-        [Category("Generation Operators")]
-        [Description("This sample uses Repeat to generate a sequence that contains the number 7 ten times.")]
+        /// <summary>
+        /// This sample uses Repeat to generate a sequence that contains the number 7 ten times.
+        /// </summary>
         public void Linq66()
         {
             var numbers = Enumerable.Repeat(7, 10);
