@@ -1,17 +1,17 @@
 ﻿using LinqSamples.Data.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 
 namespace LinqSamples.Runner
 {
     public partial class LinqSamples : LinqSampleBase
     {
-        [Category("Join Operators")]
-        [Description("This sample shows how to perform a simple inner equijoin of two sequences to " +
-            "produce a flat result set that consists of each element in suppliers that has a matching element " +
-            "in customers.")]
+        /// <summary>
+        /// This sample shows how to perform a simple inner equijoin of two sequences to
+        /// produce a flat result set that consists of each element in suppliers that has a matching element
+        /// in customers.
+        /// </summary>
         public void Linq102()
         {
 
@@ -29,9 +29,10 @@ namespace LinqSamples.Runner
             }
         }
 
-        [Category("Join Operators")]
-        [Description("A group join produces a hierarchical sequence. The following query is an inner join " +
-                    " that produces a sequence of objects, each of which has a key and an inner sequence of all matching elements.")]
+        /// <summary>
+        /// A group join produces a hierarchical sequence. The following query is an inner join
+        /// that produces a sequence of objects, each of which has a key and an inner sequence of all matching elements.
+        /// </summary>
         public void Linq103()
         {
             List<Customer> customers = GetCustomerList();
@@ -53,9 +54,10 @@ namespace LinqSamples.Runner
             }
         }
 
-        [Category("Join Operators")]
-        [Description("The group join operator is more general than join, as this slightly more verbose " +
-            "version of the cross join sample shows.")]
+        /// <summary>
+        /// The group join operator is more general than join, as this slightly more verbose
+        /// version of the cross join sample shows.
+        /// </summary>
         public void Linq104()
         {
             string[] categories = new string[]{
@@ -78,9 +80,11 @@ namespace LinqSamples.Runner
                 Console.WriteLine(item.ProductName + ": " + item.Category);
             }
         }
-        [Category("Join Operators")]
-        [Description("A left outer join produces a result set that includes all the left hand side elements at " +
-            "least once, even if they don't match any right hand side elements.")]
+
+        /// <summary>
+        /// A left outer join produces a result set that includes all the left hand side elements at
+        /// least once, even if they don't match any right hand side elements.
+        /// </summary>
         public void Linq105()
         {
             List<Customer> customers = GetCustomerList();
@@ -104,9 +108,10 @@ namespace LinqSamples.Runner
             }
         }
 
-        [Category("Join Operators")]
-        [Description("For each customer in the table of customers, this query returns all the suppliers " +
-                     "from that same country, or else a string indicating that no suppliers from that country were found.")]
+        /// <summary>
+        /// For each customer in the table of customers, this query returns all the suppliers
+        /// from that same country, or else a string indicating that no suppliers from that country were found.
+        /// </summary>
         public void Linq106()
         {
 
@@ -131,10 +136,11 @@ namespace LinqSamples.Runner
             }
         }
 
-        [Category("Join Operators")]
-        [Description("For each supplier in the table of suppliers, this query returns all the customers " +
-                     "from the same city and country, or else a string indicating that no customers from that city/country were found. " +
-                     "Note the use of anonymous types to encapsulate the multiple key values.")]
+        /// <summary>
+        /// For each supplier in the table of suppliers, this query returns all the customers
+        /// from the same city and country, or else a string indicating that no customers from that city/country were found.
+        /// Note the use of anonymous types to encapsulate the multiple key values.
+        /// </summary>
         public void Linq107()
         {
             List<Customer> customers = GetCustomerList();

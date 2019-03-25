@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Linq;
 
@@ -8,9 +7,9 @@ namespace LinqSamples.Runner
 {
     public partial class LinqSamples
     {
-        [Category("Grouping Operators")]
-        [Description("This sample uses group by to partition a list of numbers by " +
-                    "their remainder when divided by 5.")]
+        /// <summary>
+        /// This sample uses group by to partition a list of numbers by their remainder when divided by 5.
+        /// </summary>
         public void DataSetLinq40()
         {
 
@@ -31,9 +30,9 @@ namespace LinqSamples.Runner
             }
         }
 
-        [Category("Grouping Operators")]
-        [Description("This sample uses group by to partition a list of words by " +
-                     "their first letter.")]
+        /// <summary>
+        /// This sample uses group by to partition a list of words by their first letter.
+        /// </summary>
         public void DataSetLinq41()
         {
 
@@ -54,8 +53,9 @@ namespace LinqSamples.Runner
             }
         }
 
-        [Category("Grouping Operators")]
-        [Description("This sample uses group by to partition a list of products by category.")]
+        /// <summary>
+        /// This sample uses group by to partition a list of products by category.
+        /// </summary>
         public void DataSetLinq42()
         {
 
@@ -76,9 +76,9 @@ namespace LinqSamples.Runner
             }
         }
 
-        [Category("Grouping Operators")]
-        [Description("This sample uses group by to partition a list of each customer's orders, " +
-                     "first by year, and then by month.")]
+        /// <summary>
+        /// This sample uses group by to partition a list of each customer's orders, first by year, and then by month.
+        /// </summary>
         public void DataSetLinq43()
         {
 
@@ -143,9 +143,10 @@ namespace LinqSamples.Runner
             }
         }
 
-        [Category("Grouping Operators")]
-        [Description("This sample uses GroupBy to partition trimmed elements of an array using " +
-                     "a custom comparer that matches words that are anagrams of each other.")]
+        /// <summary>
+        /// This sample uses GroupBy to partition trimmed elements of an array using
+        /// a custom comparer that matches words that are anagrams of each other.
+        /// </summary>
         public void DataSetLinq44()
         {
 
@@ -163,10 +164,11 @@ namespace LinqSamples.Runner
             }
         }
 
-        [Category("Grouping Operators")]
-        [Description("This sample uses GroupBy to partition trimmed elements of an array using " +
-                     "a custom comparer that matches words that are anagrams of each other, " +
-                     "and then converts the results to uppercase.")]
+        /// <summary>
+        /// This sample uses GroupBy to partition trimmed elements of an array using
+        /// a custom comparer that matches words that are anagrams of each other,
+        /// and then converts the results to uppercase.
+        /// </summary>
         public void DataSetLinq45()
         {
 
